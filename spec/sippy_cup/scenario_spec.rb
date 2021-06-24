@@ -610,6 +610,7 @@ Call-ID: [call_id]
 CSeq: [cseq] INVITE
 Contact: <sip:sipp@[local_ip]:[local_port];transport=[transport]>
 Max-Forwards: 100
+Session-Expires: 600
 User-Agent: SIPp/sippy_cup
 Content-Type: application/sdp
 Content-Length: [len]
@@ -739,6 +740,7 @@ Call-ID: [call_id]
 CSeq: [cseq] INVITE
 Contact: <sip:#{specs_from}@[local_ip]:[local_port];transport=[transport]>
 Max-Forwards: 100
+Session-Expires: 600
 User-Agent: SIPp/sippy_cup
 Content-Type: application/sdp
 Content-Length: [len]

@@ -166,6 +166,7 @@ Call-ID: [call_id]
 CSeq: [cseq] INVITE
 Contact: <sip:#{from_addr};transport=[transport]>
 Max-Forwards: 100
+Session-Expires: 600
 User-Agent: #{USER_AGENT}
 Content-Type: application/sdp
 Content-Length: [len]
