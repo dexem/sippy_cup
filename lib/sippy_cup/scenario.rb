@@ -561,7 +561,7 @@ Duration=#{delay}
     def send_bye(opts = {})
       msg = <<-MSG
 
-BYE sip:[$call_addr] SIP/2.0
+BYE [next_url] SIP/2.0
 Via: SIP/2.0/[transport] #{@adv_ip}:[local_port];branch=[branch]
 From: <sip:[$local_addr]>;tag=[call_number]
 To: <sip:[$remote_addr]>;tag=[$remote_tag]
