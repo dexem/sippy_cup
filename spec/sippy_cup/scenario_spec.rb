@@ -636,7 +636,7 @@ a=fmtp:101 0-15
   </recv>
   <send>
 <![CDATA[
-ACK [next_url] SIP/2.0
+ACK sip:[service]@[remote_ip]:[remote_port] SIP/2.0
 Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
 From: "sipp" <sip:sipp@[local_ip]:[local_port]>;tag=[call_number]
 To: <sip:[service]@[remote_ip]:[remote_port]>[peer_tag_param]
@@ -766,7 +766,7 @@ a=fmtp:101 0-15
   </recv>
   <send>
 <![CDATA[
-ACK [next_url] SIP/2.0
+ACK sip:[service]@[remote_ip]:[remote_port] SIP/2.0
 Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
 From: "#{specs_from}" <sip:#{specs_from}@[local_ip]:[local_port]>;tag=[call_number]
 To: <sip:[service]@[remote_ip]:[remote_port]>[peer_tag_param]
