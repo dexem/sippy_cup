@@ -645,8 +645,7 @@ CSeq: [cseq] ACK
 Contact: <sip:[$local_addr];transport=[transport]>
 Max-Forwards: 100
 User-Agent: SIPp/sippy_cup
-Content-Length: 0
-[routes]
+Content-Length: [len]
 ]]>
 </send>
   <recv request="BYE"/>
@@ -775,8 +774,7 @@ CSeq: [cseq] ACK
 Contact: <sip:[$local_addr];transport=[transport]>
 Max-Forwards: 100
 User-Agent: SIPp/sippy_cup
-Content-Length: 0
-[routes]
+Content-Length: [len]
 ]]>
 </send>
   <nop>

@@ -455,8 +455,7 @@ CSeq: [cseq] ACK
 Contact: <sip:[$local_addr];transport=[transport]>
 Max-Forwards: 100
 User-Agent: #{USER_AGENT}
-Content-Length: 0
-[routes]
+Content-Length: [len]
       BODY
       send msg, opts
       start_media
@@ -570,8 +569,7 @@ Call-ID: [call_id]
 CSeq: [cseq] BYE
 Max-Forwards: 100
 User-Agent: #{USER_AGENT}
-Content-Length: 0
-[routes]
+Content-Length: [len]
       MSG
       send msg, opts
     end
