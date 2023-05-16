@@ -486,7 +486,7 @@ describe SippyCup::Scenario do
       scenario.send_digits '136'
 
       xml = scenario.to_xml
-      scenario.to_xml.should match(%r{(<send>.*INFO SIP/2\.0.*</send>.*){3}}m)
+      scenario.to_xml.should match(%r{(<send>.*INFO \[next_url\] SIP/2\.0.*</send>.*){3}}m)
       scenario.to_xml.should match(%r{Signal=1(\nDuration=250\n).*Signal=3\1.*Signal=6\1}m)
     end
 
@@ -636,7 +636,7 @@ a=fmtp:101 0-15
   </recv>
   <send>
 <![CDATA[
-ACK SIP/2.0
+ACK [next_url] SIP/2.0
 Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
 From: "sipp" <sip:sipp@[local_ip]:[local_port]>;tag=[call_number]
 To: <sip:[service]@[remote_ip]:[remote_port]>[peer_tag_param]
@@ -766,7 +766,7 @@ a=fmtp:101 0-15
   </recv>
   <send>
 <![CDATA[
-ACK SIP/2.0
+ACK [next_url] SIP/2.0
 Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
 From: "#{specs_from}" <sip:#{specs_from}@[local_ip]:[local_port]>;tag=[call_number]
 To: <sip:[service]@[remote_ip]:[remote_port]>[peer_tag_param]

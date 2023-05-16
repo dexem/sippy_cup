@@ -33,7 +33,7 @@ a=fmtp:101 0-15
   <recv response="200" rrs="true" rtd="true"/>
   <send>
 <![CDATA[
-ACK SIP/2.0
+ACK [next_url] SIP/2.0
 Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
 From: "#{specs_from}" <sip:#{specs_from}@[local_ip]>;tag=[call_number]
 [last_To:]

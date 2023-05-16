@@ -446,7 +446,7 @@ a=rtpmap:0 PCMU/8000
     def ack_answer(opts = {})
       msg = <<-BODY
 
-ACK SIP/2.0
+ACK [next_url] SIP/2.0
 Via: SIP/2.0/[transport] #{@adv_ip}:[local_port];branch=[branch]
 From: "#{@from_user}" <sip:#{@from_user}@#{@adv_ip}:[local_port]>;tag=[call_number]
 To: <sip:#{to_addr}>[peer_tag_param]
@@ -497,7 +497,7 @@ Content-Length: 0
         when :info
           info = <<-INFO
 
-INFO SIP/2.0
+INFO [next_url] SIP/2.0
 Via: SIP/2.0/[transport] #{@adv_ip}:[local_port];branch=[branch]
 From: "#{@from_user}" <sip:#{@from_user}@#{@adv_ip}:[local_port]>;tag=[call_number]
 To: <sip:#{to_addr}>[peer_tag_param]
@@ -561,7 +561,7 @@ Duration=#{delay}
     def send_bye(opts = {})
       msg = <<-MSG
 
-BYE SIP/2.0
+BYE [next_url] SIP/2.0
 Via: SIP/2.0/[transport] #{@adv_ip}:[local_port];branch=[branch]
 From: <sip:[$local_addr]>;tag=[call_number]
 To: <sip:[$remote_addr]>;tag=[$remote_tag]
